@@ -14,7 +14,13 @@ export default async function handler(
       return;
     }
 
+    console.log(`[src]: ${src}}`);
+    console.time("base64");
+
     const { base64 } = await getPlaiceholder(src);
+
+    console.log(`[base64]: ${base64}`);
+    console.timeEnd("base64");
 
     res.status(200).json(base64);
   } catch (error) {
