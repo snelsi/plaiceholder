@@ -17,7 +17,8 @@ export default async function handler(
     console.log(`[src]: ${src}}`);
     console.time("base64");
 
-    const { base64 } = await getPlaiceholder(src);
+    // const { base64 } = await getPlaiceholder(src);
+    const { base64 } = { base64: "test" };
 
     console.log(`[base64]: ${base64}`);
     console.timeEnd("base64");
